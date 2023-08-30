@@ -18,13 +18,17 @@
             <div class="text-center">
                 <button class="btn btn-active btn-secondary text-white">Sort By Date</button>
             </div>
+            <!-- loading -->
+            <div id="loading" class="text-center mt-40 hidden">
+                <span class="loading loading-spinner loading-lg"></span>
+            </div>
             <!-- tool card -->
-            <div id="tool-card-container" class="grid grid-cols-3 mt-8 gap-6">
+            <div id="tool-card-container" class="grid grid-cols-3 my-8 gap-6">
                 
               </div>
             <!-- See More -->
             <div class="text-center">
-                <button class="btn btn-active btn-secondary text-white my-10">See More</button>
+                <button onclick="showAllCard(true)" id="see-more" class="btn btn-active btn-secondary hidden text-white my-10">See More</button>
             </div>
         </section>
     </main>
