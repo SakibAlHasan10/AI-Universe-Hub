@@ -67,7 +67,29 @@ const cardOfModal = async (id) =>{
         const data = await fetch(`https://openapi.programming-hero.com/api/ai/tool/${id}`)
         const res = await data.json();
         const aiTool = res.data
+    // console.log(aiTool)
+    myModalBody(aiTool)
+}
+// modal full body
+const modalContainer = document.getElementById('modal-container');
+const myModalBody = (aiTool) =>{
+    modalContainer.innerHTML=`
+        <div class="flex p-14 gap-6">
+            <div class="flex-1 p-5 border-solid border-2 border-slate-400">
+                <h3 class="font-bold text-lg">Hello!</h3>
+                <p class="py-4">Press ESC key or click on ✕ button to close</p>
+            </div>
+            <div class="flex-1 text-center p-5 border-solid border-2 border-slate-400">
+                <img src="${aiTool.image_link[0]}" class="h-56 mb-4" />
+                <h2 class="text-xl font-semibold">${aiTool.input_output_examples[0].input}</h2>
+                <p class="text-sm font-normal mt-3">${aiTool.input_output_examples[0].output}</p>
+            </div>
+            
+        </div>
+        
+    `
     console.log(aiTool)
+    modalId()
 }
 const loading = document.getElementById("loading");
 const loadFiled = (load) => {
@@ -79,6 +101,9 @@ const loadFiled = (load) => {
     }
   }
 };
+const modalId = () =>{
+    my_ai_tool.showModal()
+}
 const showAllCard = (isShow) => {
   allAiData(isShow);
   console.log("hello", isShow);
