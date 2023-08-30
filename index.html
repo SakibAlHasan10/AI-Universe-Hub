@@ -6,31 +6,25 @@
     <title>AI Universe Hub</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
     <header>
         <h2 class="text-3xl font-semibold text-center my-8">AI Universe Hub</h2>
     </header>
-    <main>
+    <main class="max-w-screen-xl mx-auto px-8 ">
         <section>
             <!-- Sort By Date -->
             <div class="text-center">
                 <button class="btn btn-active btn-secondary text-white">Sort By Date</button>
             </div>
             <!-- tool card -->
-            <div class="card w-96 bg-base-100 shadow-xl">
-                <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-                <div class="card-body">
-                  <h2 class="card-title">Shoes!</h2>
-                  <p>If a dog chews shoes whose shoes does he choose?</p>
-                  <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Buy Now</button>
-                  </div>
-                </div>
+            <div id="tool-card-container" class="grid grid-cols-3 mt-8 gap-6">
+                
               </div>
             <!-- See More -->
             <div class="text-center">
-                <button class="btn btn-active btn-secondary text-white mt-8">See More</button>
+                <button class="btn btn-active btn-secondary text-white my-10">See More</button>
             </div>
         </section>
     </main>
