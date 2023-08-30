@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
+
 <body>
     <header>
         <h2 class="text-3xl font-semibold text-center my-8">AI Universe Hub</h2>
@@ -24,14 +26,31 @@
             </div>
             <!-- tool card -->
             <div id="tool-card-container" class="grid grid-cols-3 my-8 gap-6">
-                
-              </div>
+
+            </div>
             <!-- See More -->
             <div class="text-center">
-                <button onclick="showAllCard(true)" id="see-more" class="btn btn-active btn-secondary hidden text-white my-10">See More</button>
+                <button onclick="showAllCard(true)" id="see-more"
+                    class="btn btn-active btn-secondary hidden text-white my-10">See More</button>
+            </div>
+        </section>
+        <!-- modal -->
+
+        <section>
+            <div>
+                <!-- You can open the modal using ID.showModal() method -->
+                <button class="btn" onclick="my_modal_3.showModal()">open modal</button>
+                <dialog id="my_modal_3" class="modal">
+                    <form method="dialog" class="modal-box">
+                        <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                        <h3 class="font-bold text-lg">Hello!</h3>
+                        <p class="py-4">Press ESC key or click on ✕ button to close</p>
+                    </form>
+                </dialog>
             </div>
         </section>
     </main>
     <script src="./ai-universe-hub.js"></script>
 </body>
+
 </html>
